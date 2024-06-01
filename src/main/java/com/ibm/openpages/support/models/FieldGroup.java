@@ -36,7 +36,7 @@ public class FieldGroup {
         return field;
     }
 
-    public Field addField(Field field) {
+    public <T extends Field> T addField(T field) {
         field.setFieldGroup(this);
 
         fields.add(field);
