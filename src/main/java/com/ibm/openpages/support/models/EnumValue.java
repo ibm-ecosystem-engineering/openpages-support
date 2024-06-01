@@ -1,4 +1,4 @@
-package com.ibm.openpages.models;
+package com.ibm.openpages.support.models;
 
 public class EnumValue implements ResultValueAndLabel {
     private final IEnumGroup enumGroup;

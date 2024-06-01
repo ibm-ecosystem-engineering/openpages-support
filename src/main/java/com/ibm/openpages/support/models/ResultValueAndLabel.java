@@ -1,4 +1,4 @@
-package com.ibm.openpages.models;
+package com.ibm.openpages.support.models;
 
 public interface ResultValueAndLabel extends ResultValue, ResultLabel {
 }

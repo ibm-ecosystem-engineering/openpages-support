@@ -1,7 +1,7 @@
 package com.ibm.openpages.support.util;
 
-import com.ibm.openpages.models.ResultValue;
-import com.ibm.openpages.models.ResultValueAndLabel;
+import com.ibm.openpages.support.models.ResultValue;
+import com.ibm.openpages.support.models.ResultValueAndLabel;
 
 import java.util.Arrays;
 import java.util.Optional;

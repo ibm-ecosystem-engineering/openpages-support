@@ -1,8 +1,8 @@
 package com.ibm.openpages.support.util;
 
 import com.ibm.openpages.api.resource.IEnumField;
-import com.ibm.openpages.models.EnumValue;
-import com.ibm.openpages.models.IEnumGroup;
+import com.ibm.openpages.support.models.EnumValue;
+import com.ibm.openpages.support.models.IEnumGroup;
 
 import java.util.List;
 import java.util.Optional;
