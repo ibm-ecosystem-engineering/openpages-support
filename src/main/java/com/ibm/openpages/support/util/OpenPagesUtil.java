@@ -1,7 +1,5 @@
 package com.ibm.openpages.support.util;
 
-import com.ibm.openpages.models.*;
-import com.ibm.openpages.models.object_type.Metric;
 import com.ibm.openpages.api.metadata.IEnumValue;
 import com.ibm.openpages.api.metadata.ITypeDefinition;
 import com.ibm.openpages.api.metadata.Id;
@@ -11,7 +9,11 @@ import com.ibm.openpages.api.query.ITabularResultSet;
 import com.ibm.openpages.api.resource.*;
 import com.ibm.openpages.api.service.IQueryService;
 import com.ibm.openpages.api.service.IResourceService;
-import com.ibm.openpages.models.object_type.MetricValue;
+import com.ibm.openpages.support.models.FieldMetadata;
+import com.ibm.openpages.support.models.ResultValue;
+import com.ibm.openpages.support.models.ResultValueAndLabel;
+import com.ibm.openpages.support.models.object_type.Metric;
+import com.ibm.openpages.support.models.object_type.MetricValue;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

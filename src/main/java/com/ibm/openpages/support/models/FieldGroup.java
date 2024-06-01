@@ -1,4 +1,4 @@
-package com.ibm.openpages.models;
+package com.ibm.openpages.support.models;
 
 import com.ibm.openpages.support.util.FieldType;
 

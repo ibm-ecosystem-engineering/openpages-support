@@ -1,8 +1,8 @@
-package com.ibm.openpages.models.enum_value;
+package com.ibm.openpages.support.models.enum_value;
 
-import com.ibm.openpages.models.EnumGroup;
-import com.ibm.openpages.models.EnumValue;
-import com.ibm.openpages.models.IEnumGroup;
+import com.ibm.openpages.support.models.EnumGroup;
+import com.ibm.openpages.support.models.EnumValue;
+import com.ibm.openpages.support.models.IEnumGroup;
 
 import java.util.List;
 import java.util.Optional;

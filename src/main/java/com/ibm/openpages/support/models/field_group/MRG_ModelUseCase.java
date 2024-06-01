@@ -1,10 +1,10 @@
-package com.ibm.openpages.models.field_group;
+package com.ibm.openpages.support.models.field_group;
 
-import com.ibm.openpages.models.Field;
-import com.ibm.openpages.models.FieldGroup;
-import com.ibm.openpages.models.enum_value.MRGModelUseCase_ExternallyFacing;
-import com.ibm.openpages.models.enum_value.MRGModelUseCase_UseCaseType;
-import com.ibm.openpages.models.enum_value.MRGModelUseCase_UsesFoundationModels;
+import com.ibm.openpages.support.models.Field;
+import com.ibm.openpages.support.models.FieldGroup;
+import com.ibm.openpages.support.models.enum_value.MRGModelUseCase_ExternallyFacing;
+import com.ibm.openpages.support.models.enum_value.MRGModelUseCase_UseCaseType;
+import com.ibm.openpages.support.models.enum_value.MRGModelUseCase_UsesFoundationModels;
 import com.ibm.openpages.support.util.EnumFieldType;
 import com.ibm.openpages.support.util.FieldType;
 
