@@ -3,16 +3,16 @@ package com.ibm.openpages.support.models;
 import com.ibm.openpages.support.util.FieldType;
 
 public class Field implements FieldMetadata, ResultLabel {
-    final private FieldGroup fieldGroup;
+    private FieldGroup fieldGroup;
     final private String value;
     final private String label;
     final private FieldType<?> fieldType;
 
-    public Field(FieldGroup fieldGroup, String fieldName, FieldType<?> fieldType) {
+    protected Field(FieldGroup fieldGroup, String fieldName, FieldType<?> fieldType) {
         this(fieldGroup, fieldName, fieldName, fieldType);
     }
 
-    public Field(FieldGroup fieldGroup, String value, String label, FieldType<?> fieldType) {
+    protected Field(FieldGroup fieldGroup, String value, String label, FieldType<?> fieldType) {
         this.fieldGroup = fieldGroup;
         this.value = fieldGroup.fieldName(value);
         this.label = label;
@@ -72,5 +72,9 @@ public class Field implements FieldMetadata, ResultLabel {
     @Override
     public String label() {
         return label;
+    }
+
+    protected void setFieldGroup(FieldGroup fieldGroup) {
+        this.fieldGroup = fieldGroup;
     }
 }

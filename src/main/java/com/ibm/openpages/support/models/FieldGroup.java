@@ -36,6 +36,14 @@ public class FieldGroup {
         return field;
     }
 
+    public Field addField(Field field) {
+        field.setFieldGroup(this);
+
+        fields.add(field);
+
+        return field;
+    }
+
     public Field field(String name) {
         return fields.stream()
                 .filter(field -> field.value().equals(fieldName(name)))
