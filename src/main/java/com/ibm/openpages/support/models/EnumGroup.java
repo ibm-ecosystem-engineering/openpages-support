@@ -9,8 +9,15 @@ import java.util.Optional;
 
 public class EnumGroup implements IEnumGroup {
     private final List<EnumValue> values;
+    private final String name;
 
+    @Deprecated
     public EnumGroup() {
+        this("<Unknown>");
+    }
+
+    public EnumGroup(String name) {
+        this.name = name;
         this.values = new ArrayList<EnumValue>();
     }
 
@@ -31,6 +38,11 @@ public class EnumGroup implements IEnumGroup {
     }
 
     @Override
+    public String name() {
+        return name;
+    }
+
+    @Override
     public List<EnumValue> values() {
         return Collections.unmodifiableList(values);
     }
@@ -44,5 +56,9 @@ public class EnumGroup implements IEnumGroup {
     @Override
     public Optional<EnumValue> lookup(String value) {
         return EnumUtil.lookup(valuesArray(), value);
+    }
+
+    public String toString() {
+        return "[EnumGroup: " + name + "]";
     }
 }

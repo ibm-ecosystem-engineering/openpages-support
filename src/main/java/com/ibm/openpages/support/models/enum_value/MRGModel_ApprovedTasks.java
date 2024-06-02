@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class MRGModel_ApprovedTasks {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("ApprovedTasks");
 
     public static final EnumValue Summarization = eg.addEnumValue("Summarization");
     public static final EnumValue Classification = eg.addEnumValue("Classification");

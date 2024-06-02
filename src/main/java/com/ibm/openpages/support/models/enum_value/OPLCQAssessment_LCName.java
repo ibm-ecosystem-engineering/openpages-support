@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class OPLCQAssessment_LCName {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("LCName");
 
     public static final EnumValue TwoStage = eg.addEnumValue("2Stage", "2 Stage Lifecycle (no review)");
     public static final EnumValue ThreeStage = eg.addEnumValue("3Stage", "3 Stage Lifecycle (with review)");

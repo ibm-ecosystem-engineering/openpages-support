@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class MRGAIFactsModelUseCase_Status {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("Status");
 
     public static final EnumValue Proposed = eg.addEnumValue("Proposed");
     public static final EnumValue AwaitingApproval = eg.addEnumValue("Awaiting Approval");

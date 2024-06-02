@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class MRGModel_MeasurementType {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("MeasurementType");
 
     public static final EnumValue EconomicCapital = eg.addEnumValue("Economic Capital");
     public static final EnumValue ProbabilityOfDefault = eg.addEnumValue("Probability of Default");

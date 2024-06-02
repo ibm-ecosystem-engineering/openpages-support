@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class WatsonxQAssessment_AIAssessmentType {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("AIAssessmentType");
 
     public static final EnumValue NotDetermined = eg.addEnumValue("Not Determined");
     public static final EnumValue DataGathering = eg.addEnumValue("Data Gathering");

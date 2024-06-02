@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class Integration_Application {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("Application");
 
     public static final EnumValue QRadar = eg.addEnumValue("QRadar");
     public static final EnumValue WatsonKnowledgeCatalog = eg.addEnumValue("Watson Knowledge Catalog");

@@ -27,4 +27,8 @@ public class EnumValue implements ResultValueAndLabel {
     public IEnumGroup enumGroup() {
         return enumGroup;
     }
+
+    public String toString() {
+        return "[EnumValue: " + enumGroup + "." + value + " (" + label + ")]";
+    }
 }

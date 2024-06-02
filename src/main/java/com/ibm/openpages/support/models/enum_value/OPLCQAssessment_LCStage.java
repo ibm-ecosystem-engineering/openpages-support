@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class OPLCQAssessment_LCStage {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("LCStage");
 
     public static final EnumValue TwoStageInfo = eg.addEnumValue("2Stage-Info", "Information Gathering");
     public static final EnumValue TwoStageClose = eg.addEnumValue("2Stage-Close", "Close");

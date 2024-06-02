@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class MRGAIFactsModelUseCase_RiskLevel {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("RiskLevel");
 
     public static final EnumValue High = eg.addEnumValue("High");
     public static final EnumValue Medium = eg.addEnumValue("Medium");

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class MRGModel_ExternalModel {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("ExternalModel");
 
     public static final EnumValue External = eg.addEnumValue("External (Yes)");
     public static final EnumValue Internal = eg.addEnumValue("Internal (No)");

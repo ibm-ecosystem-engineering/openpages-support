@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class MRGModel_ComplianceStatus {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("ComplianceStatus");
 
     public static final EnumValue Compliant = eg.addEnumValue("Compliant");
     public static final EnumValue PartiallyCompliant = eg.addEnumValue("Partially Compliant");

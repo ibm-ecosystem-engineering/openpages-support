@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class MRGModelUseCase_UsesFoundationModels {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("UsesFoundationModels");
 
     public static final EnumValue Yes = eg.addEnumValue("Yes");
     public static final EnumValue No = eg.addEnumValue("No");

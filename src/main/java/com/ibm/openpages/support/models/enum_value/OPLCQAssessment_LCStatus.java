@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class OPLCQAssessment_LCStatus {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("LCStatus");
 
     public static final EnumValue Complete = eg.addEnumValue("Complete");
     public static final EnumValue InReview = eg.addEnumValue("InReview");
