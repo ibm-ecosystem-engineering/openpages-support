@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class FieldGroup {
-    private final List<Field> fields;
+    private final List<? super BaseField<?>> fields;
     private final String value;
 
     public FieldGroup(final String value) {
@@ -16,7 +16,7 @@ public class FieldGroup {
         fields = new ArrayList<>();
     }
 
-    public List<Field> fields() {
+    public List<? super BaseField<?>> fields() {
         return Collections.unmodifiableList(fields);
     }
 
@@ -36,16 +36,17 @@ public class FieldGroup {
         return field;
     }
 
-    public <T extends Field> T addField(T field) {
-        field.setFieldGroup(this);
+    public <T extends BaseField<T>> T addField(T field) {
+        final T groupedField = field.withFieldGroup(this);
 
-        fields.add(field);
+        fields.add(groupedField);
 
-        return field;
+        return groupedField;
     }
 
-    public Field field(String name) {
+    public BaseField<?> field(String name) {
         return fields.stream()
+                .map(field -> (BaseField<?>)field)
                 .filter(field -> field.value().equals(fieldName(name)))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("Field " + name + " not found"));
