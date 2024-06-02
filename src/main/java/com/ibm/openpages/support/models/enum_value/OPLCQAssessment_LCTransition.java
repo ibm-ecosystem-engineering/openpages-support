@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class OPLCQAssessment_LCTransition {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("LCTransition");
 
     public static final EnumValue TwoStageInfoSubmit = eg.addEnumValue("2Stage-Info-Submit", "Submit and Close");
     public static final EnumValue ThreeStageInfoSubmit = eg.addEnumValue("3Stage-Info-Submit", "Submit");

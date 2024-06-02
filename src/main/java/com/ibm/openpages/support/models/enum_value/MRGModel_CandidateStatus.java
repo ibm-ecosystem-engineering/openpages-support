@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class MRGModel_CandidateStatus {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("CandidateStatus");
 
     public static final EnumValue ModelCandidate = eg.addEnumValue("Model Candidate");
     public static final EnumValue CandidateAwaitingConfirmation = eg.addEnumValue("Candidate- Awaiting Confirmation");

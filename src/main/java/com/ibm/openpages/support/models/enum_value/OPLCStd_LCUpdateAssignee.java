@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class OPLCStd_LCUpdateAssignee {
-    protected static final EnumGroup eg = new EnumGroup();
+    protected static final EnumGroup eg = new EnumGroup("LCUpdateAssignee");
 
     public static final EnumValue Yes = eg.addEnumValue("Yes");
 
