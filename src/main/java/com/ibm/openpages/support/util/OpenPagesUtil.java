@@ -14,6 +14,7 @@ import com.ibm.openpages.support.models.ResultValue;
 import com.ibm.openpages.support.models.ResultValueAndLabel;
 import com.ibm.openpages.support.models.object_type.Metric;
 import com.ibm.openpages.support.models.object_type.MetricValue;
+import com.ibm.openpages.support.util.query.QueryClause;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -599,5 +600,9 @@ public class OpenPagesUtil {
                 .filter(OpenPagesUtil::isQuestionnaireAssessment)
                 .map(node -> lookupResource(service, node, IncludeAssociations.CHILD))
                 .collect(Collectors.toList());
+    }
+
+    public static String buildQuery(String baseQuery, QueryClause clause) {
+        return baseQuery + " WHERE " + clause.toClause();
     }
 }

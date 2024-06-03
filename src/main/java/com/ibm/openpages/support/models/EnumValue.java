@@ -20,6 +20,11 @@ public class EnumValue implements ResultValueAndLabel {
     }
 
     @Override
+    public String baseValue() {
+        return value;
+    }
+
+    @Override
     public String value() {
         return value;
     }
