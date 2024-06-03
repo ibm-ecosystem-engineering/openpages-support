@@ -18,6 +18,6 @@ public class SimpleQueryClause extends QueryClause {
 
     @Override
     public String toClause() {
-        return "[" + type.name() + "].[" + field.baseValue() + "] " + operation.value() + " " + value;
+        return operation.toClause(type, field, value);
     }
 }
