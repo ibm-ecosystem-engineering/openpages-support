@@ -5,10 +5,16 @@ import com.ibm.openpages.support.models.ResultValue;
 
 public abstract class QueryClause {
 
+    public static QueryClause where(IObjectType type, ResultValue field, Operation operation, ResultValue value) {
+        return where(type, field, operation, value.value());
+    }
     public static QueryClause where(IObjectType type, ResultValue field, Operation operation, Object value) {
         return new SimpleQueryClause(type, field, operation, value);
     }
 
+    public QueryClause and(IObjectType type, ResultValue field, Operation operation, ResultValue value) {
+        return and(type, field, operation, value.value());
+    }
     public QueryClause and(IObjectType type, ResultValue field, Operation operation, Object value) {
         return and(new SimpleQueryClause(type, field, operation, value));
     }
@@ -25,6 +31,9 @@ public abstract class QueryClause {
         return new AndQueryClause(this, clause);
     }
 
+    public QueryClause or(IObjectType type, ResultValue field, Operation operation, ResultValue value) {
+        return or(type, field, operation, value.value());
+    }
     public QueryClause or(IObjectType type, ResultValue field, Operation operation, Object value) {
         return or(new SimpleQueryClause(type, field, operation, value));
     }
