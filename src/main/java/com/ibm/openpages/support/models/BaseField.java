@@ -65,6 +65,11 @@ public abstract class BaseField<T> implements FieldMetadata, ResultLabel  {
     }
 
     @Override
+    public String baseValue() {
+        return originalValue;
+    }
+
+    @Override
     public String value() {
         return value;
     }
