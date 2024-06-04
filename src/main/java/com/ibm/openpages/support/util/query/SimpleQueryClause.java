@@ -4,13 +4,12 @@ import com.ibm.openpages.support.models.IObjectType;
 import com.ibm.openpages.support.models.ResultValue;
 
 public class SimpleQueryClause extends QueryClause {
-    private final IObjectType type;
     private final ResultValue field;
     private final Operation operation;
     private final Object value;
 
     protected SimpleQueryClause(IObjectType type, ResultValue field, Operation operation, Object value) {
-        this.type = type;
+        super(type);
         this.field = field;
         this.operation = operation;
         this.value = value;

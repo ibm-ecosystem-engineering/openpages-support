@@ -1,35 +1,21 @@
 package com.ibm.openpages.support.util.query;
 
+import com.ibm.openpages.support.models.IObjectType;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class OrQueryClause extends GroupQueryClause {
-    private final List<QueryClause> clauses;
-
-    protected OrQueryClause() {
-        this(new ArrayList<>());
-    }
-    protected OrQueryClause(QueryClause... clauses) {
-        this(Arrays.asList(clauses));
-    }
-    protected OrQueryClause(List<QueryClause> clauses) {
-        this.clauses = clauses;
+    protected OrQueryClause(IObjectType type) {
+        this(type, new ArrayList<>());
     }
 
-    @Override
-    public boolean isOr() {
-        return true;
+    protected OrQueryClause(IObjectType type, QueryClause... clauses) {
+        this(type, Arrays.asList(clauses));
     }
 
-    @Override
-    public void add(QueryClause clause) {
-        clauses.add(clause);
-    }
-
-    @Override
-    public String toClause() {
-        return "(" + clauses.stream().map(QueryClause::toClause).collect(Collectors.joining(" OR ")) + ")";
+    protected OrQueryClause(IObjectType type, List<QueryClause> clauses) {
+        super(false, type, clauses);
     }
 }
