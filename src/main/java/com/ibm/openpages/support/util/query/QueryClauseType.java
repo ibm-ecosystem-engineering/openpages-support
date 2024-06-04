@@ -11,7 +11,7 @@ public class QueryClauseType {
         this.type = type;
     }
 
-    public QueryClauseType forType(IObjectType type) {
+    public static QueryClauseType forType(IObjectType type) {
         return new QueryClauseType(type);
     }
 
