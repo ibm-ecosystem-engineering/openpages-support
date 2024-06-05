@@ -22,4 +22,12 @@ public class QueryClauseType {
         return new SimpleQueryClause(type, field, operation, value);
     }
 
+    public QueryClause and() {
+        return new AndQueryClause(type);
+    }
+
+    public QueryClause or() {
+        return new OrQueryClause(type);
+    }
+
 }
