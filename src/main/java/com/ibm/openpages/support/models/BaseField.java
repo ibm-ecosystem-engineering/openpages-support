@@ -3,6 +3,7 @@ package com.ibm.openpages.support.models;
 import com.ibm.openpages.support.util.FieldType;
 
 public abstract class BaseField<T> implements FieldMetadata, ResultLabel  {
+    final protected FieldGroup fieldGroup;
     final protected String originalValue;
     final protected String value;
     final protected String label;
@@ -13,6 +14,7 @@ public abstract class BaseField<T> implements FieldMetadata, ResultLabel  {
     }
 
     protected BaseField(FieldGroup fieldGroup, String value, String label, FieldType<?> fieldType) {
+        this.fieldGroup = fieldGroup;
         this.originalValue = value;
         this.value = fieldGroup != null ? fieldGroup.fieldName(value) : value;
         this.label = label;
@@ -72,6 +74,11 @@ public abstract class BaseField<T> implements FieldMetadata, ResultLabel  {
     @Override
     public String value() {
         return value;
+    }
+
+    @Override
+    public String normalizedValue() {
+        return fieldGroup.isSystemFieldGroup() ? originalValue : value;
     }
 
     @Override
