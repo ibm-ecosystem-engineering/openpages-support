@@ -17,6 +17,6 @@ public abstract class QueryValueFormatters {
     }
 
     public static String formatSimpleValue(Object current) {
-        return (current instanceof Number) ? current.toString() : "'" + current.toString() + "'"
+        return (current instanceof Number) ? current.toString() : "'" + current.toString() + "'";
     }
 }
