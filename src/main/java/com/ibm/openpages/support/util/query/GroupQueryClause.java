@@ -39,6 +39,6 @@ public abstract class GroupQueryClause extends QueryClause {
     public String toClause() {
         final String delimiter = and ? " AND " : " OR ";
 
-        return "(" + clauses.stream().map(QueryClause::toClause).collect(Collectors.joining(delimiter)) + ")";
+        return clauses.stream().map(QueryClause::toClause).collect(Collectors.joining(delimiter));
     }
 }

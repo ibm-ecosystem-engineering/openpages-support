@@ -29,6 +29,11 @@ public class EnumValue implements ResultValueAndLabel {
         return value;
     }
 
+    @Override
+    public String normalizedValue() {
+        return value;
+    }
+
     public IEnumGroup enumGroup() {
         return enumGroup;
     }

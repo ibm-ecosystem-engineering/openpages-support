@@ -5,7 +5,7 @@ import com.ibm.openpages.support.models.FieldGroup;
 import com.ibm.openpages.support.util.FieldType;
 
 public interface SystemFields {
-    FieldGroup fg_SystemFields = new FieldGroup("System Fields");
+    FieldGroup fg_SystemFields = new FieldGroup("System Fields", true);
 
     Field Name = fg_SystemFields.addField("Name", FieldType.String);
 }

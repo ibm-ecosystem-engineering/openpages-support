@@ -10,10 +10,20 @@ import java.util.Objects;
 public class FieldGroup {
     private final List<? super BaseField<?>> fields;
     private final String value;
+    private final boolean systemFieldGroup;
 
     public FieldGroup(final String value) {
+        this(value, false);
+    }
+    public FieldGroup(final String value, final boolean systemFields) {
         this.value = value;
+        this.systemFieldGroup = systemFields;
+
         fields = new ArrayList<>();
+    }
+
+    public boolean isSystemFieldGroup() {
+        return systemFieldGroup;
     }
 
     public List<? super BaseField<?>> fields() {
@@ -54,6 +64,10 @@ public class FieldGroup {
 
     public String fieldName(String name) {
         return value + ":" + name;
+    }
+
+    public String value() {
+        return value;
     }
 
     @Override

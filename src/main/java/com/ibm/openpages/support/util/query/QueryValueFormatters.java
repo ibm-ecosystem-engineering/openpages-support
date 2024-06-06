@@ -11,9 +11,9 @@ public abstract class QueryValueFormatters {
         final String valueList = value
                 .stream()
                 .map(QueryValueFormatters::formatSimpleValue)
-                .collect(Collectors.joining(","));
+                .collect(Collectors.joining(", "));
 
-        return "[" + valueList + "]";
+        return "(" + valueList + ")";
     }
 
     public static String formatSimpleValue(Object current) {
