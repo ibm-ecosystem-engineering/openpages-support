@@ -3,22 +3,20 @@ package com.ibm.openpages.support.util.query;
 import com.ibm.openpages.support.models.IObjectType;
 import com.ibm.openpages.support.models.ResultValue;
 
-import java.util.Collections;
-import java.util.List;
 import java.util.function.Function;
 
 public enum Operation {
     EQUALS("="),
-    IN("IN", inValue -> (inValue instanceof List<?>) ? inValue : Collections.singletonList(inValue));
+    IN("IN", QueryValueFormatters::formatListValue);
 
     private final String value;
-    private final Function<Object, Object> valueFormatter;
+    private final Function<Object, String> valueFormatter;
 
     Operation(String value) {
-        this(value, in -> in);
+        this(value, QueryValueFormatters::formatSimpleValue);
     }
 
-    Operation(String value, Function<Object, Object> valueFormatter) {
+    Operation(String value, Function<Object, String> valueFormatter) {
         this.value = value;
         this.valueFormatter = valueFormatter;
     }
