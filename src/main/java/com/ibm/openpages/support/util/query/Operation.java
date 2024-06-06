@@ -28,6 +28,6 @@ public enum Operation {
     public String toClause(IObjectType type, ResultValue field, Object inValue) {
         final Object value = valueFormatter.apply(inValue);
 
-        return "[" + type.name() + "].[" + field.baseValue() + "] " + this.value() + " " + value;
+        return "[" + type.name() + "].[" + field.normalizedValue() + "] " + this.value() + " " + value;
     }
 }
