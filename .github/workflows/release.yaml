@@ -1,4 +1,4 @@
-name: Release module
+name: Release
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -21,6 +21,7 @@ jobs:
           distribution: 'temurin'
           architecture: x64
           cache: gradle
+          java-version-file: ./.java-version
 
       - name: Test with Gradle
         run: ./gradlew test
@@ -29,6 +30,7 @@ jobs:
         run: ./gradlew build
 
   release:
+    needs: ["verify"]
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -50,7 +52,7 @@ jobs:
         id: variables
         shell: bash
         run: |
-          VERSION=$(echo "${{ steps.create-release.outputs.tag_name }}" | | sed "s/v//g")
+          VERSION=$(echo "${{ steps.create-release.outputs.tag_name }}" | sed "s/v//g")
           
           echo "Version: ${VERSION}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT

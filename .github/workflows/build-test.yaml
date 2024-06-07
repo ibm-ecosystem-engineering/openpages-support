@@ -1,4 +1,4 @@
-name: Docker build
+name: Java verify
 
 # Controls when the workflow will run
 on:
@@ -20,6 +20,7 @@ jobs:
           distribution: 'temurin'
           architecture: x64
           cache: gradle
+          java-version-file: ./.java-version
 
       - name: Test with Gradle
         run: ./gradlew test
