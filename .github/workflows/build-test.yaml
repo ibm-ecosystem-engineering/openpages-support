@@ -1,4 +1,4 @@
-name: Docker build
+name: Java verify
 
 # Controls when the workflow will run
 on:
